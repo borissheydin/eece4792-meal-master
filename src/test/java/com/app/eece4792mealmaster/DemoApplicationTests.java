@@ -1,4 +1,4 @@
-package com.example.eece4792mealmaster;
+package com.app.eece4792mealmaster;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
