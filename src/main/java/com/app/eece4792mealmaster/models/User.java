@@ -1,5 +1,6 @@
 package com.app.eece4792mealmaster.models;
 
+import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -27,6 +28,7 @@ public class User {
   private String lastName;
   private String username;
   private String email;
+  private LocalDate dob;
 
   @ManyToMany(cascade = {
           CascadeType.PERSIST,
@@ -107,5 +109,13 @@ public class User {
 
   public void setFollowing(Set<User> following) {
     this.following = following;
+  }
+
+  public LocalDate getDob() {
+    return dob;
+  }
+
+  public void setDob(LocalDate dob) {
+    this.dob = dob;
   }
 }
