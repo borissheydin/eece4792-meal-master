@@ -1,13 +1,13 @@
-package com.example.eece4792mealmaster;
+package com.app.eece4792mealmaster;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DemoApplication {
+public class MealMaster {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DemoApplication.class, args);
+		SpringApplication.run(MealMaster.class, args);
 	}
 
 }
