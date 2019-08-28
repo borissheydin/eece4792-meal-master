@@ -21,4 +21,44 @@ public class Nutrient {
   @MapsId("ndbNo")
   @JsonIgnore
   private Product product;
+
+  public Long getNutrientCode() {
+    return nutrientCode;
+  }
+
+  public void setNutrientCode(Long nutrientCode) {
+    this.nutrientCode = nutrientCode;
+  }
+
+  public String getDerivationDescription() {
+    return derivationDescription;
+  }
+
+  public void setDerivationDescription(String derivationDescription) {
+    this.derivationDescription = derivationDescription;
+  }
+
+  public double getOutputValue() {
+    return outputValue;
+  }
+
+  public void setOutputValue(double outputValue) {
+    this.outputValue = outputValue;
+  }
+
+  public String getOutputUom() {
+    return outputUom;
+  }
+
+  public void setOutputUom(String outputUom) {
+    this.outputUom = outputUom;
+  }
+
+  public Product getProduct() {
+    return product;
+  }
+
+  public void setProduct(Product product) {
+    this.product = product;
+  }
 }

@@ -22,4 +22,20 @@ public class GenericFood {
   @JsonIgnore
   @OneToMany (mappedBy = "genericClassification")
   private Set<Product> members;
+
+  public Long getId() {
+    return id;
+  }
+
+  public void setId(Long id) {
+    this.id = id;
+  }
+
+  public Set<Product> getMembers() {
+    return members;
+  }
+
+  public void setMembers(Set<Product> members) {
+    this.members = members;
+  }
 }
