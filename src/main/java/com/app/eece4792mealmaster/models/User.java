@@ -1,10 +1,13 @@
 package com.app.eece4792mealmaster.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -26,9 +29,14 @@ public class User {
   private Long id;
   private String firstName;
   private String lastName;
+  @Column(unique=true, nullable=false)
   private String username;
+  @Column(unique=true, nullable=false)
   private String email;
   private LocalDate dob;
+  @JsonIgnore
+  @Column(nullable=false)
+  private String password;
 
   @ManyToMany(cascade = {
           CascadeType.PERSIST,
@@ -117,5 +125,13 @@ public class User {
 
   public void setDob(LocalDate dob) {
     this.dob = dob;
+  }
+
+  public String getPassword() {
+    return password;
+  }
+
+  public void setPassword(String password) {
+    this.password = password;
   }
 }
